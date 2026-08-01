@@ -10,7 +10,9 @@ pipeline {
         }
 
         stage('Install Dependencies') {
-           echo "Installing dependancies"
+           steps {
+            echo "Installing dependancies"
+           }
         }
 
         stage('Test') {
