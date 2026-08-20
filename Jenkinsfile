@@ -14,6 +14,21 @@ pipeline {
             }
         }
 
+        stage('Check Files') {
+            steps {
+                sh '''
+                    echo "Workspace:"
+                    pwd
+
+                    echo "Files:"
+                    ls -la
+
+                    echo "Package files:"
+                    ls -la package.json package-lock.json
+                '''
+            }
+        }
+
         stage('Generate Docker Image') {
             steps {
                 echo 'Building Docker image...'
