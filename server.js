@@ -1,10 +1,5 @@
 const http = require('http');
 
-const routes = require("express");
-
-
-const router = routes.Router;
-
 const port = 3000;
 
 // Create server
